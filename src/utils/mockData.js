@@ -1,56 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-//Design for our food delivery app
-// Header
-//     -Logo
-//     -Nav-items
-// Body
-//     -Search
-//     -RestaurantContainer
-//         -RestaurantCard
-//              - RestaurantImage, RestaurantName, Cuisine, Rating, etc
-// Footer
-//     -Copyright
-//     -Links
-//     -Address
-//     -Contact
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo" src="https://img.freepik.com/premium-vector/nice-food-logo-design_733256-10.jpg?w=360" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-const RestaurantCard = (props) => {
-    const { resData } = props;
-
-    const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, deliveryTime } = resData?.data;
-    return (
-        <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
-            {/* <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/xqwpuhgnsaf18te7zvtv"} alt="res-logo" /> */}
-            <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} alt="res-logo" />
-            <h3>{name}</h3>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4>{avgRating}⭐</h4>
-            <h4>₹{costForTwo / 100} For Two</h4>
-            <h4>{deliveryTime} minutes</h4>
-        </div>
-    )
-}
-
 const resList = [
     {
         type: "restaurant",
@@ -1936,25 +1883,4 @@ const resList = [
     },
 ];
 
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">Search</div>
-            <div className="res-container">
-                {resList.map((restaurant) => (<RestaurantCard key={restaurant.data.id} resData={restaurant} />))}
-            </div>
-        </div>
-    )
-}
-
-const AppLayout = () => {
-    return (
-        <div className="app">
-            <Header />
-            <Body />
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resList;
