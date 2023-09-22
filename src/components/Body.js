@@ -35,13 +35,18 @@ const Body = () => {
                     setFilteredRestaurant(filteredRestaurant);
                 }}>Search</button>
 
-                <button className="filter-btn" onClick={() => {
-                    const filteredList = listOfRestaurants.filter((res) => res?.info?.avgRating > 4);
-                    setListOfRestaurants(filteredList);
-                }}>Top Rated Restaurants</button>
+                <button
+                    className="filter-btn"
+                    onClick={() => {
+                        const filteredList = listOfRestaurants.filter(
+                            (res) => res.info.avgRating > 4.2
+                        );
+                        setFilteredRestaurant(filteredList);
+                    }}>Top Rated Restaurants
+                </button>
             </div>
             <div className="res-container">
-                {filteredRestaurant.map((restaurant) => (<RestaurantCard key={restaurant?.info.id} resData={restaurant?.info} />))}
+                {filteredRestaurant.map((restaurant) => (<RestaurantCard key={restaurant?.info?.id} resData={restaurant?.info} />))}
             </div>
         </div>
     )
