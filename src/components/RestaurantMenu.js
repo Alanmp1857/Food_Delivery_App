@@ -27,7 +27,18 @@ const RestaurantMenu = () => {
     const { name, cuisines, costForTwoMessage } = resInfo?.cards[0]?.card?.card?.info;
 
     // const x = resInfo?.cards[2]?.groupedCard.cardGroupMap.REGULAR.cards[1];
-    const { itemCards } = resInfo?.cards[2]?.groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
+    // const { itemCards } =
+    //     (resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card) ||
+    //     (resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card);
+
+    const { itemCards: itemCards1 } =
+        resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card || {};
+
+    const { itemCards: itemCards2 } =
+        resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card || {};
+
+    const itemCards = (itemCards1 || []).concat(itemCards2 || []);
+
     console.log(itemCards);
 
     return (
