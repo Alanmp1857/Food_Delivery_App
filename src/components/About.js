@@ -1,21 +1,29 @@
 import React from "react";
 import User from "./User";
 import UserClass from "./UserClass";
-// import {{ Component }} from "react";
+import { Component } from "react";
 
-class About extends React.Component {
+class About extends Component {
     constructor(props) {
         super(props);
 
-        console.log("Parent Constructor");
+        // console.log("Parent Constructor");
     }
 
     componentDidMount() {
         console.log("Parent Component Did Mount");
     }
 
+    componentDidUpdate() {
+        console.log("Component did Update");
+    }
+
+    componentWillUnmount() {
+        console.log("Component will Unmount")
+    }
+
     render() {
-        console.log("Parent render");
+        // console.log("Parent render");
         return (
             <div>
                 <UserClass name="Alan Panicker" location="Nashik" social="https://www.linkedin.com/in/alan-panicker-35460a201/" />
