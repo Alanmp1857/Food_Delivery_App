@@ -2,6 +2,8 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import image from '../utils/image.jpg';
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -22,6 +24,16 @@ const Body = () => {
         // setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    }
+
+    const onlineStatus = useOnlineStatus();
+    if (onlineStatus === false) {
+        return (
+            <div>
+                <h1>Looks like you're Offline! Please check your internet connection.</h1>
+                <img src={image} alt="no-internet" />
+            </div>
+        )
     }
 
     return listOfRestaurants.length === 0 ? (<Shimmer />) : (
