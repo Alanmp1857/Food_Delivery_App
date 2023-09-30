@@ -20,9 +20,9 @@ class UserClass extends React.Component {
         // console.log(this.props.name + "Child render")
         return (
             <div className="user-class">
-                <h2>Name: {this.props.name}</h2>
-                <h3>Location: {this.props.location}</h3>
-                <h3>LinkedIn: <Link to="https://www.linkedin.com/in/alan-panicker-35460a201/">{this.props.social}</Link></h3>
+                <h2 className="font-semibold text-xl">Name: {this.props.name}</h2>
+                <h3 className="font-semibold text-xl">Location: {this.props.location}</h3>
+                <h3 className="font-semibold text-xl">LinkedIn: <Link to="https://www.linkedin.com/in/alan-panicker-35460a201/">{this.props.social}</Link></h3>
             </div>
         )
     }

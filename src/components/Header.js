@@ -10,29 +10,29 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     return (
-        <div className="header">
+        <div className="flex justify-between bg-orange-300 shadow-lg">
             <div className="logo-container">
-                <img className="logo" src={LOGO_URL} />
+                <img className="w-20 rounded-full m-4" src={LOGO_URL} />
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>
+            <div className="flex items-center">
+                <ul className="flex p-4 m-4">
+                    <li className="px-4 font-semibold">
                         Online Status: {onlineStatus ? "🟢" : "🔴"}
                     </li>
-                    <li className="home">
+                    <li className="px-4 cursor-pointer font-semibold">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="about">
+                    <li className="px-4 cursor-pointer font-semibold">
                         <Link to="/about">About Us</Link>
                     </li>
-                    <li className="contact">
+                    <li className="px-4 cursor-pointer font-semibold">
                         <Link to="/contact">Contact Us</Link>
                     </li>
-                    <li className="grocery">
+                    <li className="px-4 cursor-pointer font-semibold">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="cart">Cart</li>
-                    <button className="login" onClick={() => { btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login") }}>{btnNameReact}</button>
+                    <li className="px-4 font-semibold">Cart</li>
+                    <button className="border border-solid border-black font-semibold px-3 pb-1 bg-green-200 rounded-lg drop-shadow-lg hover:bg-green-300" onClick={() => { btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login") }}>{btnNameReact}</button>
                 </ul>
             </div>
         </div>

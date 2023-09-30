@@ -25,7 +25,7 @@ class About extends Component {
     render() {
         // console.log("Parent render");
         return (
-            <div>
+            <div className="m-4 p-4">
                 <UserClass name="Alan Panicker" location="Nashik" social="https://www.linkedin.com/in/alan-panicker-35460a201/" />
             </div>
         )
