@@ -3,10 +3,6 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => {
     const { resData } = props;
 
-    // if (!resData) {
-    //     return null; // or some other fallback UI
-    // }
-
     const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } = resData;
 
     return (
@@ -21,6 +17,18 @@ const RestaurantCard = (props) => {
             <h4 className="ml-12 mt-2 font-semibold rounded-lg px-1">{sla.deliveryTime} minutes</h4>
         </div>
     )
+}
+
+// Higher order component
+export const withPromotedLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div>
+                <label className="absolute bg-black text-white m-4 p-2 rounded-lg">Promoted</label>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
 }
 
 export default RestaurantCard;
