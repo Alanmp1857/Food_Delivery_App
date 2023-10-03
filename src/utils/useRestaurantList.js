@@ -13,7 +13,7 @@ const useRestaurantList = () => {
         const data = await fetch(SWIGGY_API);
 
         const json = await data.json();
-        console.log(json);
+        // console.log(json);
         setListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
