@@ -40,7 +40,9 @@ const Header = () => {
                     <li className="px-4 cursor-pointer font-semibold">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="px-4 font-semibold">Cart - ({cartItems.length} items)</li>
+                    <li className="px-4 font-semibold">
+                        <Link to="/cart">Cart - ({cartItems.length} items)</Link>
+                    </li>
                     <li className="px-4 cursor-pointer font-semibold">
                         {loggedInUser}
                     </li>
