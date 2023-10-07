@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { clearCart } from "../utils/cartSlice";
 
 const Cart = () => {
+    //Always select the right portion of the store while subscribing otherwise there will be performance loss.
     const cartItems = useSelector((store) => store.cart.items);
 
     const dispatch = useDispatch();
