@@ -2,7 +2,11 @@ const Contact = () => {
     return (
         <div className="m-4 p-4">
             <h1 className="text-2xl font-bold">Contact Us Page.</h1>
-            <h2 className="my-2 text-lg font-semibold">GitHub: <a href="https://github.com/Alanmp1857">https://github.com/Alanmp1857</a></h2>
+            <form>
+                <input type="text" className="m-2 p-2 border border-black rounded-lg" placeholder="Name" />
+                <input type="text" className="m-2 p-2 border border-black rounded-lg" placeholder="Message" />
+                <button className="m-2 p-2 bg-black text-white shadow-lg rounded-lg hover:bg-gray-700">Submit</button>
+            </form>
         </div>
     )
 }
