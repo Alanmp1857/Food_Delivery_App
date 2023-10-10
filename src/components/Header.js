@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     const [btnNameReact, setBtnNameReact] = useState("Login");
@@ -16,7 +16,7 @@ const Header = () => {
 
     // Subscribing to store using Selector
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems)
+    // console.log(cartItems)
 
     return (
         <div className="flex justify-between bg-orange-300 shadow-lg">

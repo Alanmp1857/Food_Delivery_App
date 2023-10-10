@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import image from '../utils/image.jpg';
+// import image from '../utils/image.jpg';
 import useRestaurantList from "../utils/useRestaurantList";
 import UserContext from "../utils/UserContext";
 
@@ -21,7 +21,7 @@ const Body = () => {
         return (
             <div>
                 <h1>Looks like you're Offline! Please check your internet connection.</h1>
-                <img src={image} alt="no-internet" />
+                {/* <img src={image} alt="no-internet" /> */}
             </div>
         )
     }
@@ -32,7 +32,7 @@ const Body = () => {
         <div className="body">
             <div className="m-2 p-2 flex items-center">
                 {/* Search Feature */}
-                <input type="text" className="border border-solid border-black" value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
+                <input type="text" data-testid="searchInput" className="border border-solid border-black" value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
                 <button className="ml-2 p-1 bg-green-200 rounded-lg hover:bg-green-300 shadow-lg" onClick={() => {
                     // console.log(searchText);
 

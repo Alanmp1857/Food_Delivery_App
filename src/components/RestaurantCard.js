@@ -5,8 +5,10 @@ const RestaurantCard = (props) => {
 
     const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } = resData;
 
+    console.log(resData)
+
     return (
-        <div className="m-3 p-4 w-56 bg-gray-200 hover:bg-gray-300 rounded-lg">
+        <div data-testid="resCard" className="m-3 p-4 w-56 bg-gray-200 hover:bg-gray-300 rounded-lg">
             <img className="rounded-lg w-56 h-44" src={CDN_URL + cloudinaryImageId} alt="res-logo" />
             <h3 className="font-bold my-2">{name}</h3>
             <h4 className="res-cuisine">{cuisines.join(", ")}</h4>
