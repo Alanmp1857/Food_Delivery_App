@@ -23,7 +23,7 @@
 
 ![Alt text](food.png)
 
-![Alt text](food2.png)
+![food2](https://github.com/Alanmp1857/Namaste_React_Ep04/assets/95167331/2964e2fb-c1e7-4d6a-8314-a2b2bb689c6b)
 
 ![Alt text](food3.png)
 
