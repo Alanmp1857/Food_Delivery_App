@@ -46,7 +46,7 @@ const Header = () => {
                     <li className="px-4 cursor-pointer font-semibold">
                         {loggedInUser}
                     </li>
-                    <button className="font-semibold px-3 pb-1 bg-green-200 rounded-lg drop-shadow-lg hover:bg-green-300" onClick={() => { btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login") }}>{btnNameReact}</button>
+                    <button className="font-semibold px-3 pb-1 pt-1 bg-green-200 rounded-lg drop-shadow-lg hover:bg-green-300" onClick={() => { btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login") }}>{btnNameReact}</button>
                 </ul>
             </div>
         </div>

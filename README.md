@@ -19,6 +19,14 @@
     - Address
     - Contact
 
+# Images of the Web-App
+
+![Alt text](food.png)
+
+![Alt text](food2.png)
+
+![Alt text](food3.png)
+
 # Redux Toolkit
 
 - Install @reduxjs/toolkit and react-redux

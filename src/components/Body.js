@@ -33,7 +33,7 @@ const Body = () => {
             <div className="m-2 p-2 flex items-center">
                 {/* Search Feature */}
                 <input type="text" data-testid="searchInput" className="border border-solid border-black" value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
-                <button className="ml-2 p-1 bg-green-200 rounded-lg hover:bg-green-300 shadow-lg" onClick={() => {
+                <button className="ml-2 p-2 bg-green-200 rounded-lg hover:bg-green-300 shadow-lg" onClick={() => {
                     // console.log(searchText);
 
                     const filteredRestaurant = listOfRestaurants.filter((res) => res?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
@@ -52,10 +52,10 @@ const Body = () => {
                     }}>Top Rated Restaurants
                 </button>
 
-                <div className="m-4 p-4">
+                {/* <div className="m-4 p-4">
                     <label>UserName: </label>
                     <input className="border border-black p-1" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
-                </div>
+                </div> */}
             </div>
 
 
